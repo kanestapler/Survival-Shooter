@@ -450,7 +450,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -622,10 +622,31 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 54cc172c3cf8c0f41b826c7cdf1cd0ea, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &324109112 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 188132, guid: 54cc172c3cf8c0f41b826c7cdf1cd0ea, type: 2}
+  m_PrefabInternal: {fileID: 324109111}
 --- !u!4 &324109118 stripped
 Transform:
   m_PrefabParentObject: {fileID: 448342, guid: 54cc172c3cf8c0f41b826c7cdf1cd0ea, type: 2}
   m_PrefabInternal: {fileID: 324109111}
+--- !u!114 &324109119
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 324109112}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 544f2064df03e95419b4a5147c506b08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 100
+  dyingAudio: {fileID: 8300000, guid: d36a393bca4582043982db9089e1694f, type: 3}
+  damageImage: {fileID: 855110513}
+  healthSlider: {fileID: 64006754}
+  flashSpeed: 5
+  flashColor: {r: 1, g: 0.16176468, b: 0.16176468, a: 0.159}
 --- !u!1 &406614778
 GameObject:
   m_ObjectHideFlags: 0
@@ -847,7 +868,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.19999993, g: 1, b: 0, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -1142,6 +1163,19 @@ Rigidbody:
 Transform:
   m_PrefabParentObject: {fileID: 400074, guid: be66986effd141b4992d2d78be127139, type: 3}
   m_PrefabInternal: {fileID: 862745050}
+--- !u!114 &1529016449
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1529016440}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e15099f5ee559584089d5851df572def, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackDamage: 10
+  timeBetweenAttacks: 0.5
 --- !u!1 &1544030442
 GameObject:
   m_ObjectHideFlags: 0
