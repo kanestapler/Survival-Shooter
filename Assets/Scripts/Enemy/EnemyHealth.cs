@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 
 public class EnemyHealth : MonoBehaviour
 {
@@ -16,8 +17,10 @@ public class EnemyHealth : MonoBehaviour
 	private Rigidbody rb;
 	private ParticleSystem hitParticles;
 	private CapsuleCollider capsuleCollider;
+	private GameObject gameController;
 
 	void Awake(){
+		gameController = GameObject.FindGameObjectWithTag ("GameController");
 		anim = GetComponent<Animator> ();
 		audioSource = GetComponent<AudioSource> ();
 		rb = GetComponent<Rigidbody> ();
@@ -52,6 +55,7 @@ public class EnemyHealth : MonoBehaviour
 
 	void Dead() {
 		isDead = true;
+		gameController.GetComponent<ScoreManager> ().AddScore(scoreValue);
 		capsuleCollider.isTrigger = true;
 		anim.SetTrigger("Dead");
 		audioSource.clip = deathSound;

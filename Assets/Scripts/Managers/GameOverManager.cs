@@ -1,21 +1,15 @@
 ﻿using UnityEngine;
 
-public class GameOverManager : MonoBehaviour
-{
-    public PlayerHealth playerHealth;
+public class GameOverManager : MonoBehaviour {
 
 
-    Animator anim;
 
-
-    void Awake()
-    {
-        anim = GetComponent<Animator>();
+    void Awake() {
+        
     }
 
 
-    void Update()
-    {
+    void Update() {
 
     }
 }

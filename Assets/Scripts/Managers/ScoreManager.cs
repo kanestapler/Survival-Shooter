@@ -2,23 +2,20 @@
 using UnityEngine.UI;
 using System.Collections;
 
-public class ScoreManager : MonoBehaviour
-{
-    public static int score;
+public class ScoreManager : MonoBehaviour {
+   
+	private static int score;
+	public Text scoreText;
 
-
-    Text text;
-
-
-    void Awake ()
-    {
-        text = GetComponent <Text> ();
-        score = 0;
+    void Awake () {
+		score = 0;
     }
 
-
-    void Update ()
-    {
-        text.text = "Score: " + score;
+    void Update () {
+		scoreText.text = "Score: " + score.ToString ();
     }
+
+	public void AddScore(int addition) {
+		score += addition;
+	}
 }
