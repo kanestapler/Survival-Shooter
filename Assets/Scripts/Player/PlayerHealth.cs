@@ -16,12 +16,14 @@ public class PlayerHealth : MonoBehaviour
 	private Animator anim;
 	private PlayerMovement playerMovement;
 	private AudioSource audioSource;
+	private PlayerShooting playerShooting;
 	private bool damaged;
 	private bool isDead;
 	private int currentHealth;
 
 	void Awake() {
 		playerMovement = GetComponent<PlayerMovement> ();
+		playerShooting = GetComponentInChildren<PlayerShooting> ();
 		audioSource = GetComponent<AudioSource> ();
 		anim = GetComponent<Animator> ();
 		currentHealth = maxHealth;
@@ -63,5 +65,6 @@ public class PlayerHealth : MonoBehaviour
 		audioSource.Play ();
 		//Flip anim flag saying playerDead
 		anim.SetTrigger("Die");
+		playerShooting.TurnOffShooting ();
 	}
 }
