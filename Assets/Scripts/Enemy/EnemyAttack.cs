@@ -27,7 +27,6 @@ public class EnemyAttack : MonoBehaviour
 	void OnTriggerEnter(Collider other) {
 		if (other.gameObject == player) {
 			playerInRange = true;
-			Debug.Log ("I hit the player");
 		}
 	}
 
@@ -49,7 +48,6 @@ public class EnemyAttack : MonoBehaviour
 
 	void Attack() {
 		if (!playerHealth.IsDead ()) {
-			Debug.Log ("Attack!");
 			timeSinceLastAttack = 0;
 			playerHealth.TakeDamage (attackDamage);
 		}
