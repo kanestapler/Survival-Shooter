@@ -253,7 +253,7 @@ Animator:
   m_GameObject: {fileID: 100000}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: c236aa7ad6dcabe47abc7d2cf903ae71, type: 3}
-  m_Controller: {fileID: 9100000, guid: 7d051e8cfa13bd148af14d52056c8f4a, type: 2}
+  m_Controller: {fileID: 9100000, guid: a664cedf5ecd3304aa224eadc7f53efe, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -319,7 +319,7 @@ MonoBehaviour:
   maxHealth: 100
   deathSound: {fileID: 8300000, guid: 62366b8d2c37a49dca550841c741317f, type: 3}
   sinkSpeed: 2.5
-  destroyTime: 0
+  destroyTime: 1
   scoreValue: 10
 --- !u!114 &11400004
 MonoBehaviour:

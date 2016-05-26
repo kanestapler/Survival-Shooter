@@ -33,7 +33,7 @@ public class EnemyHealth : MonoBehaviour
 	void Update(){
 		
 		if (isSinking) {
-			transform.Translate (Vector3.down * sinkSpeed * Time.deltaTime);
+			transform.Translate (-Vector3.up * sinkSpeed * Time.deltaTime);
 		}
 	}
 
